@@ -12,7 +12,7 @@ import javax.jms.Queue;
 @org.springframework.context.annotation.Configuration
 public class Configuration {
 
-    @Value("${activemq.broker.url}")
+    @Value("${spring.activemq.broker-url}")
     private String brokerUrl;
 
     @Bean
