@@ -35,12 +35,13 @@ services:
   springbootapp:
     image: active-mq/springboot
     container_name: springbootapp
+    build: .
     ports:
       - "8081:8081"
     depends_on:
       - activemq
     environment:
       - spring.activemq.broker-url=tcp://activemq:61616
-      - spring.activemq.in-memory = false
-      - spring.activemq.pool.enabled = false
+      - spring.activemq.in-memory=false
+      - spring.activemq.pool.enabled=false
       - server.port=8081
